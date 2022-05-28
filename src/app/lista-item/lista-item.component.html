@@ -1,24 +1,31 @@
-<div class="card bg-light text-dark">
-    <div class="card-header text-center">
+<div class="card bg-light text-dark m-4 rounded-0">
+    <div class="card-header text-center bg-primary rounded-0">
         {{event.name}}
     </div>
     <div class="card-body">
-        <p class="card-text">{{event.desc}}</p>
-        <div class="accordion" id="accordionExample">
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <a class="accordion-button" type="button" data-bs-toggle="collapse" href="#collapse{{index}}">
-                    Informacje
-                </a>
-            </h2>
-                <div id="collapse{{index}}" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        <p>Gdzie?</p>
-                        <p>{{event.city}}, {{event.street}} {{event.address}}</p>
-                        <p>Kiedy??</p>
-                        <p>{{event.date.getDate()}}-{{event.date.getMonth()+1}}-{{event.date.getFullYear()}} {{event.date.getHours()}}:{{event.date.getMinutes()}}</p>
-                        <p>Kontakt</p>
-                        <p>Telefon: {{event.mobile}} E-mail: {{event.email}}</p>
+        <div class="row">
+            <div class="col-4">
+                <img class="ratio ratio-16x9" src="https://assets.dicebreaker.com/roll-player-board-game-gameplay.jpg/BROK/resize/1200x1200%3E/format/jpg/quality/70/roll-player-board-game-gameplay.jpg">
+            </div>
+            <div class="col-8">
+                <p class="card-text">{{event.desc}}</p>
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <a class="accordion-button collapsed" style="text-decoration:none" type="button" data-bs-toggle="collapse" href="#collapse{{index}}">
+                                Informacje
+                            </a>
+                        </h2>
+                            <div id="collapse{{index}}" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <p><b>Miejsce</b><br>
+                                    {{event.city}}, {{event.street}} {{event.address}}</p>
+                                    <p><b>Data</b><br>
+                                    {{event.date.getDate()}}-{{event.date.getMonth()+1}}-{{event.date.getFullYear()}} {{event.date.getHours()}}:{{event.date.getMinutes()}}</p>
+                                    <p><b>Kontakt</b><br>
+                                    Telefon: {{event.mobile}} E-mail: {{event.email}}</p>
+                                </div>
+                            </div>
                     </div>
                 </div>
             </div>
