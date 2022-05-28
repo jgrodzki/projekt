@@ -1,0 +1,27 @@
+<div class="card bg-light text-dark">
+    <div class="card-header text-center">
+        {{event.name}}
+    </div>
+    <div class="card-body">
+        <p class="card-text">{{event.desc}}</p>
+        <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <a class="accordion-button" type="button" data-bs-toggle="collapse" href="#collapse{{index}}">
+                    Informacje
+                </a>
+            </h2>
+                <div id="collapse{{index}}" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        <p>Gdzie?</p>
+                        <p>{{event.city}}, {{event.street}} {{event.address}}</p>
+                        <p>Kiedy??</p>
+                        <p>{{event.date.getDate()}}-{{event.date.getMonth()+1}}-{{event.date.getFullYear()}} {{event.date.getHours()}}:{{event.date.getMinutes()}}</p>
+                        <p>Kontakt</p>
+                        <p>Telefon: {{event.mobile}} E-mail: {{event.email}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

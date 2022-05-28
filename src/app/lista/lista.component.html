@@ -1,0 +1,10 @@
+<div class="card bg-dark text-light rounded-0">
+    <div class="card-header text-center bg-primary text-dark rounded-0">
+        Lista wydarzeń
+    </div>
+    <div class="card-body">
+        <div class="card-body">
+            <app-lista-item *ngFor="let event of EVENTS;let i=index" [event]="event" [index]="i"></app-lista-item>
+        </div>
+    </div>
+</div>
