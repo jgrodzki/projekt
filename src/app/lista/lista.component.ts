@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { EVENTS } from '../test'
+import { EventsService } from '../events.service';
 import { GameEvent } from '../GameEvent';
 
 @Component({
@@ -8,10 +8,11 @@ import { GameEvent } from '../GameEvent';
   styleUrls: ['./lista.component.css']
 })
 export class ListaComponent implements OnInit {
-  EVENTS:GameEvent[]=EVENTS;
-  constructor() { }
+  events!:GameEvent[];
+  constructor(private eventsService:EventsService) { }
 
   ngOnInit(): void {
+      this.eventsService.getEvents().subscribe((events)=>this.events=events);
   }
 
 }

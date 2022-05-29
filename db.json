@@ -1,0 +1,49 @@
+{
+    "events":[
+        {
+            "name":"Noc gier",
+            "desc":"Zagraj w gry z nami!",
+            "city":"Łodź",
+            "street":"Politechniki",
+            "address":16,
+            "mobile":734651876,
+            "email":"kontakt@nocgier.pl",
+            "date":"2022-05-30 15:30:00",
+            "players":[
+                {
+                    "name":"Jan",
+                    "lastName":"Kowalski",
+                    "nickName":"janko",
+                    "email":"janko@email.com",
+                    "mobile":123456789
+                },
+                {
+                    "name":"Imperator",
+                    "lastName":"Brzezin",
+                    "nickName":"TwUj PaN",
+                    "email":"zagłada@ludzkości.com",
+                    "mobile":666666666
+                }
+            ]
+        },
+        {
+            "name":"Turniej karciarzy",
+            "desc":"Zmierz się z najlepszymi!",
+            "city":"Warszawa",
+            "street":"Hazardzistów",
+            "address":15,
+            "mobile":837483593,
+            "email":"kontakt@karty.pl",
+            "date":"2022-05-25 12:00:00",
+            "players":[
+                {
+                    "name":"Jan",
+                    "lastName":"Oszust",
+                    "nickName":"fixx",
+                    "email":"fixx@email.com",
+                    "mobile":387485426
+                }
+            ]
+        }
+    ]
+}
