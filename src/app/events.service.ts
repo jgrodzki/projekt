@@ -14,8 +14,8 @@ const httpOptions=
   providedIn: 'root'
 })
 export class EventsService {
-  //private apiUrl="http://localhost:3000/events";
-  private apiUrl="https://my-json-server.typicode.com/jgrodzki/projekt/events";
+  private apiUrl="http://localhost:3000/events";
+  //private apiUrl="https://my-json-server.typicode.com/jgrodzki/projekt/events";
   constructor(private http:HttpClient) { }
   getEvents():Observable<GameEvent[]>
   {
