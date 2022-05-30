@@ -4,30 +4,42 @@
         Formularz zapisu
     </div>
     <div class="card-body p-0">
-        <form class="m-4 text-dark">
+        <form class="m-4 text-dark" (ngSubmit)="onSubmit()">
             <div class="row">
-                <div class="col-6">
+                <div class="col-4">
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="nameInput" placeholder="Imię" required>
+                        <input type="text" class="form-control" id="nameInput" name="nameInput" placeholder="Imię" [(ngModel)]="nameInput" required>
                         <label for="nameInput">Imię</label>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-4">
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="lastNameInput" placeholder="Nazwisko" required>
+                        <input type="text" class="form-control" id="nickNameInput" name="nickNameInput" placeholder="Pseudonim" [(ngModel)]="nickNameInput" required>
+                        <label for="nickNameInput" class="form-label">Pseudonim</label>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="lastNameInput" name="lastNameInput" placeholder="Nazwisko" [(ngModel)]="lastNameInput" required>
                         <label for="lastNameInput" class="form-label">Nazwisko</label>
                     </div>
                 </div>
             </div>
             <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="emailInput" placeholder="E-mail" required>
+                <input type="email" class="form-control" id="emailInput" name="emailInput" placeholder="E-mail" [(ngModel)]="emailInput" required>
                 <label for="emailInput" class="form-label">E-mail</label>
             </div>
             <div class="form-floating mb-3">
-                <input type="number" class="form-control" id="mobileInput" placeholder="Telefon" required>
+                <input type="number" class="form-control" id="mobileInput" name="mobileInput" placeholder="Telefon" [(ngModel)]="mobileInput" required>
                 <label for="mobileInput" class="form-label">Telefon</label>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <div class="form-floating mb-3">
+                <select class="form-select" id="eventInput" name="eventInput" placeholder="Wybierz wydarzenie" [(ngModel)]="eventInput" required>
+                    <option *ngFor="let event of events;let i=index" value="{{i}}">{{event.name}}</option>
+                </select>
+                <label for="eventInput" class="form-label">Wybierz wydarzenie</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Zapisz się</button>
         </form>
     </div>
 </div>

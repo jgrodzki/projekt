@@ -1,49 +1,51 @@
 {
-    "events":[
+  "events": [
+    {
+      "id": 0,
+      "name": "Noc gier planszowych",
+      "desc": "Zagraj z nami!",
+      "city": "Łódź",
+      "street": "Politechniki",
+      "address": 16,
+      "mobile": 763476343,
+      "email": "kontakt@karty.pl",
+      "date": "2022-05-30 15:30:00",
+      "players": [
         {
-            "name":"Noc gier",
-            "desc":"Zagraj w gry z nami!",
-            "city":"Łodź",
-            "street":"Politechniki",
-            "address":16,
-            "mobile":734651876,
-            "email":"kontakt@nocgier.pl",
-            "date":"2022-05-30 15:30:00",
-            "players":[
-                {
-                    "name":"Jan",
-                    "lastName":"Kowalski",
-                    "nickName":"janko",
-                    "email":"janko@email.com",
-                    "mobile":123456789
-                },
-                {
-                    "name":"Imperator",
-                    "lastName":"Brzezin",
-                    "nickName":"TwUj PaN",
-                    "email":"zagłada@ludzkości.com",
-                    "mobile":666666666
-                }
-            ]
+          "name": "Anna",
+          "lastName": "Kowalska",
+          "nickName": "anko",
+          "email": "anko@email.com",
+          "mobile": 338748674
         },
         {
-            "name":"Turniej karciarzy",
-            "desc":"Zmierz się z najlepszymi!",
-            "city":"Warszawa",
-            "street":"Hazardzistów",
-            "address":15,
-            "mobile":837483593,
-            "email":"kontakt@karty.pl",
-            "date":"2022-05-25 12:00:00",
-            "players":[
-                {
-                    "name":"Jan",
-                    "lastName":"Oszust",
-                    "nickName":"fixx",
-                    "email":"fixx@email.com",
-                    "mobile":387485426
-                }
-            ]
+          "name": "Jan",
+          "lastName": "Kowalski",
+          "nickName": "janko",
+          "email": "janko@email.com",
+          "mobile": 837487764
         }
-    ]
+      ]
+    },
+    {
+      "id": 1,
+      "name": "Turniej karciarzy",
+      "desc": "Zmierz się z najlepszymi!",
+      "city": "Warszawa",
+      "street": "Hazardzistów",
+      "address": 15,
+      "mobile": 837483593,
+      "email": "kontakt@karty.pl",
+      "date": "2022-05-25 12:00:00",
+      "players": [
+        {
+          "name": "Jan",
+          "lastName": "Kowal",
+          "nickName": "0x",
+          "email": "0x@email.com",
+          "mobile": 387485426
+        }
+      ]
+    }
+  ]
 }

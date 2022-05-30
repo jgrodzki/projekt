@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { GameEvent } from '../GameEvent';
+import { images, Image } from '../ImageIndex'
 
 @Component({
   selector: 'app-lista-item',
@@ -7,6 +8,7 @@ import { GameEvent } from '../GameEvent';
   styleUrls: ['./lista-item.component.css']
 })
 export class ListaItemComponent implements OnInit {
+  images:Image[]=images;
   @Input() index!:number;
   @Input() event!:GameEvent;
   constructor() { }
