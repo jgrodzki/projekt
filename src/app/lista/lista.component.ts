@@ -14,5 +14,4 @@ export class ListaComponent implements OnInit {
   ngOnInit(): void {
       this.eventsService.getEvents().subscribe((events)=>this.events=events);
   }
-
 }
