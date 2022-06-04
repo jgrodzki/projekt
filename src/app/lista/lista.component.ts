@@ -10,7 +10,6 @@ import { GameEvent } from '../GameEvent';
 export class ListaComponent implements OnInit {
   events!:GameEvent[];
   constructor(private eventsService:EventsService) { }
-
   ngOnInit(): void {
       this.eventsService.getEvents().subscribe((events)=>this.events=events);
   }
