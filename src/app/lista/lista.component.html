@@ -2,7 +2,9 @@
     <div class="card-header text-center bg-primary text-dark rounded-0">
         Lista wydarzeń
     </div>
-    <div class="card-body p-0">
-        <app-lista-item *ngFor="let event of events;let i=index" [event]="event" [index]="i"></app-lista-item>
+    <div class="d-flex justify-content-center">
+        <div class="card-body p-0 maxw">
+            <app-lista-item *ngFor="let event of events;let i=index" [event]="event" [index]="i"></app-lista-item>
+        </div>
     </div>
 </div>

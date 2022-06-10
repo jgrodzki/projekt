@@ -2,9 +2,11 @@
     <div class="card-header text-center bg-primary text-dark rounded-0">
         Galeria zdjęć
     </div>
-    <div class="card-body p-4 g-0 row">
-        <div class="col-12 col-lg-6 p-4" *ngFor="let image of images">
-            <img class="ratio ratio-16x9 rounded-3" src="{{image.url}}" alt="{{image.alt}}">
+    <div class="d-flex justify-content-center">
+        <div class="card-body p-4 g-0 row maxw">
+            <div class="col-12 col-lg-6 p-4" *ngFor="let image of images">
+                <img class="ratio ratio-16x9 rounded-3" src="{{image.url}}" alt="{{image.alt}}">
+            </div>
         </div>
     </div>
 </div>
