@@ -1,14 +1,14 @@
-<div class="card bg-light text-dark m-4 rounded-0">
-    <div class="card-header text-center bg-primary rounded-0">
+<div class="card bg-light m-4 border-0 rounded-0">
+    <div class="card-header text-center text-light bg-primary rounded-0">
         <b>{{event.city}}</b> - {{event.name}}
     </div>
-    <div class="card-body">
+    <div class="card-body bg-secondary">
         <div class="row">
             <div class="col-4">
                 <img class="ratio ratio-16x9" src="{{images[index].url}}">
             </div>
             <div class="col-8">
-                <p class="card-text">{{event.desc}}</p>
+                <p class="card-text text-light">{{event.desc}}</p>
                 <div class="accordion mb-3">
                     <div class="accordion-item">
                         <h2 class="accordion-header">
@@ -17,7 +17,7 @@
                             </a>
                         </h2>
                             <div id="collapse1{{index}}" class="accordion-collapse collapse">
-                                <div class="accordion-body">
+                                <div class="accordion-body text-light">
                                     <p><b>Miejsce</b><br>
                                     {{event.city}}, {{event.street}} {{event.address}}</p>
                                     <p><b>Data</b><br>
@@ -35,11 +35,11 @@
                                 Lista uczestników
                             </a>
                         </h2>
-                            <div id="collapse2{{index}}" class="accordion-collapse collapse">
-                                <div class="accordion-body">
-                                    <p *ngFor="let player of event.players">{{player.name}} "{{player.nickName}}" {{player.lastName}}</p>
-                                </div>
+                        <div id="collapse2{{index}}" class="accordion-collapse collapse">
+                            <div class="accordion-body overflow-auto text-light" style="max-height:30vh;">
+                                <p *ngFor="let player of event.players">{{player.name}} "{{player.nickName}}" {{player.lastName}}</p>
                             </div>
+                        </div>
                     </div>
                 </div>
             </div>
