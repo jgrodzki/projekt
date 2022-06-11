@@ -5,18 +5,18 @@
     <div class="card-body bg-secondary">
         <div class="row">
             <div class="col-4">
-                <img class="ratio ratio-16x9" src="{{images[index].url}}">
+                <img class="ratio ratio-16x9" src="{{images[index].url}}" alt="{{images[index].alt}}">
             </div>
             <div class="col-8">
                 <p class="card-text text-light">{{event.desc}}</p>
                 <div class="accordion mb-3">
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                            <a class="accordion-button collapsed" style="text-decoration:none" type="button" data-bs-toggle="collapse" href="#collapse1{{index}}">
+                            <a class="accordion-button collapsed" style="text-decoration:none" type="button" data-bs-toggle="collapse" href="#collapse1{{index}}" aria-controls="#collapse{{index}}" aria-expanded="false">
                                 Informacje
                             </a>
                         </h2>
-                            <div id="collapse1{{index}}" class="accordion-collapse collapse">
+                            <div id="collapse1{{index}}" class="accordion-collapse collapse" aria-labelledby="informacje o wydarzeniu">
                                 <div class="accordion-body text-light">
                                     <p><b>Miejsce</b><br>
                                     {{event.city}}, {{event.street}} {{event.address}}</p>
@@ -31,11 +31,11 @@
                 <div class="accordion" id="accordionExample">
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                            <a class="accordion-button collapsed" style="text-decoration:none" type="button" data-bs-toggle="collapse" href="#collapse2{{index}}">
+                            <a class="accordion-button collapsed" style="text-decoration:none" type="button" data-bs-toggle="collapse" href="#collapse2{{index}}" aria-controls="#collapse2{{index}}" aria-expanded="false">
                                 Lista uczestników
                             </a>
                         </h2>
-                        <div id="collapse2{{index}}" class="accordion-collapse collapse">
+                        <div id="collapse2{{index}}" class="accordion-collapse collapse" aria-labelledby="Lista uczestników wydarzenia">
                             <div class="accordion-body overflow-auto text-light" style="max-height:30vh;">
                                 <p *ngFor="let player of event.players">{{player.name}} "{{player.nickName}}" {{player.lastName}}</p>
                             </div>
