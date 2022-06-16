@@ -1,0 +1,87 @@
+<div class="card bg-dark text-light rounded-0" id="form">
+    <div class="card-header text-center bg-primary rounded-0">
+        Formularz zapisu
+    </div>
+    <div class="d-flex justify-content-center">
+        <div class="card-body p-0 maxw">
+            <form [formGroup]="playerForm" class="m-4 text-light" (ngSubmit)="onSubmit()">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="form-floating mb-3">
+                            <input class="form-control" type="text" name="nameInput" id="nameInput" placeholder="Imię" formControlName="name">
+                            <label class="text-light" for="nameInput">Imię</label>
+                        </div>
+                        <div *ngIf="playerFormControls['name'].invalid && ( playerFormControls['name'].dirty || playerFormControls['name'].touched )" class="text-danger fw-bold mb-3">
+                            Pole imię jest wymagane.
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-floating mb-3">
+                            <input class="form-control" type="text" name="nickNameInput" id="nickNameInput" placeholder="Pseudonim" formControlName="nickName">
+                            <label class="text-light" for="nickNameInput" class="form-label">Pseudonim</label>
+                        </div>
+                        <div *ngIf="playerFormControls['nickName'].invalid && ( playerFormControls['nickName'].dirty || playerFormControls['nickName'].touched )" class="text-danger fw-bold  mb-3">
+                            Pole Pseudonim jest wymagane.
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-floating mb-3">
+                            <input class="form-control" type="text" name="lastNameInput" id="lastNameInput" placeholder="Nazwisko" formControlName="lastName">
+                            <label class="text-light" for="lastNameInput" class="form-label">Nazwisko</label>
+                        </div>
+                        <div *ngIf="playerFormControls['lastName'].invalid && ( playerFormControls['lastName'].dirty || playerFormControls['lastName'].touched )" class="text-danger fw-bold  mb-3">
+                            Pole nazwisko jest wymagane.
+                        </div>
+                    </div>
+                </div>
+                <div class="form-floating mb-3">
+                    <input class="form-control" type="email" name="emailInput" id="emailInput" placeholder="E-mail" formControlName="email">
+                    <label class="text-light" for="emailInput" class="form-label">E-mail</label>
+                </div>
+                <div *ngIf="playerFormControls['email'].invalid && ( playerFormControls['email'].dirty || playerFormControls['email'].touched )" class="text-danger fw-bold  mb-3">
+                    <div *ngIf="playerFormControls['email'].errors!['required']">
+                        Pole email jest wymagane.
+                    </div>
+                    <div *ngIf="playerFormControls['email'].errors!['pattern']">
+                        Podany email jest niepoprawny.
+                    </div>
+                </div>
+                <div class="form-floating mb-3">
+                    <input class="form-control" type="text" name="mobileInput" id="mobileInput" placeholder="Telefon" formControlName="mobile">
+                    <label class="text-light" for="mobileInput" class="form-label">Telefon</label>
+                </div>
+                <div *ngIf="playerFormControls['mobile'].invalid && ( playerFormControls['mobile'].dirty || playerFormControls['mobile'].touched )" class="text-danger fw-bold  mb-3">
+                    <div *ngIf="playerFormControls['mobile'].errors!['required']">
+                        Pole telefon jest wymagane.
+                    </div>
+                    <div *ngIf="playerFormControls['mobile'].errors!['pattern']">
+                        Podany numer telefonu jest niepoprawny.
+                    </div>
+                </div>
+                <div class="form-floating mb-3">
+                    <select class="form-select" name="eventInput" id="eventInput" placeholder="Wybierz wydarzenie" formControlName="event">
+                        <option *ngFor="let event of events;let i=index" value="{{i}}">{{event.name}}</option>
+                    </select>
+                    <label class="text-light" for="eventInput" class="form-label">Wybierz wydarzenie</label>
+                </div>
+                <div *ngIf="playerFormControls['event'].invalid && ( playerFormControls['event'].dirty || playerFormControls['event'].touched )" class="text-danger fw-bold  mb-3">
+                    Pole wydarzenie jest wymagane.
+                </div>
+                <button [disabled]="playerForm.invalid" type="submit" class="btn btn-primary text-light" data-bs-toggle="modal" data-bs-target="#formSuccess">Zapisz się</button>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="formSuccess" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header text-light bg-primary border-0 rounded-0">
+                <span class="modal-title">Sukces</span>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body bg-dark text-light">
+                Zostałeś zapisany na wydzarzenie!
+            </div>
+        </div>
+    </div>
+</div>

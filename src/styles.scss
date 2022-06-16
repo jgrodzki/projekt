@@ -1,0 +1,52 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/scss/_functions.scss";
+@import "../node_modules/bootstrap/scss/_variables.scss";
+@import "../node_modules/bootstrap/scss/_mixins.scss";
+$primary:$green;
+$secondary:darken($gray-800,3);
+$theme-colors:
+(
+    "primary":    $green,
+    "secondary":  $secondary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "light":      $light,
+    "dark":       $dark
+);
+$theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
+
+$accordion-border-width:0;
+$accordion-bg:$dark;
+$accordion-color:$light;
+$accordion-button-bg:$primary;
+$accordion-button-color:$light;
+$accordion-button-active-bg:$primary;
+$accordion-button-active-color:$light;
+$accordion-button-focus-border-color:$light;
+$accordion-icon-color:$light;
+$accordion-icon-active-color:$light;
+
+$input-bg:$secondary;
+$input-focus-bg:$secondary;
+$input-color:$light;
+$input-border-color:$light;
+$input-focus-color:$light;
+$input-focus-border-color:$light;
+
+$form-select-color:$light;
+$form-select-bg:$secondary;
+$form-select-border-color:$light;
+$form-select-focus-border-color:$light;
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+.maxw
+{
+    max-width:100vw;
+}
+@include media-breakpoint-up(lg) {
+    .maxw
+    {
+        max-width:50vw;
+    }
+}

@@ -1,0 +1,142 @@
+{
+  "events": [
+    {
+      "id": 0,
+      "name": "Noc gier planszowych",
+      "desc": "Zagraj z nami!",
+      "city": "Łódź",
+      "street": "Politechniki",
+      "address": 16,
+      "mobile": 763476343,
+      "email": "kontakt@karty.pl",
+      "date": "2022-05-30 15:30:00",
+      "players": [
+        {
+          "name": "Anna",
+          "lastName": "Kowalska",
+          "nickName": "anko",
+          "email": "anko@email.com",
+          "mobile": 338748674
+        },
+        {
+          "name": "Jan",
+          "lastName": "Kowalski",
+          "nickName": "janko",
+          "email": "janko@email.com",
+          "mobile": 837487764
+        },
+        {
+          "name": "123",
+          "nickName": "123",
+          "lastName": "123",
+          "email": "123@1",
+          "mobile": 123
+        },
+        {
+          "name": "123",
+          "nickName": "123",
+          "lastName": "123",
+          "email": "123@123",
+          "mobile": "123123123"
+        },
+        {
+          "name": "123",
+          "nickName": "123",
+          "lastName": "123",
+          "email": "123@123",
+          "mobile": "123123123"
+        },
+        {
+          "name": "ok",
+          "nickName": "ok",
+          "lastName": "ok",
+          "email": "123@123",
+          "mobile": "123123123"
+        },
+        {
+          "name": "123",
+          "nickName": "123",
+          "lastName": "123",
+          "email": "12322@33.2",
+          "mobile": "123123123"
+        },
+        {
+          "name": "1231",
+          "nickName": "123",
+          "lastName": "123",
+          "email": "123@323",
+          "mobile": "123123123"
+        },
+        {
+          "name": "123",
+          "nickName": "123",
+          "lastName": "123",
+          "email": "123@23.2",
+          "mobile": "123123123"
+        },
+        {
+          "name": "1231",
+          "nickName": "23",
+          "lastName": "123",
+          "email": "123@323123",
+          "mobile": "123123123"
+        },
+        {
+          "name": "1231",
+          "nickName": "231",
+          "lastName": "23",
+          "email": "123@231233.223",
+          "mobile": "123123132"
+        },
+        {
+          "name": "1231",
+          "nickName": "231",
+          "lastName": "23",
+          "email": "123123@32323",
+          "mobile": "123123123"
+        },
+        {
+          "name": "1231",
+          "nickName": "23",
+          "lastName": "123",
+          "email": "123@2323",
+          "mobile": "123123123"
+        },
+        {
+          "name": "test",
+          "nickName": "test",
+          "lastName": "test",
+          "email": "test@test",
+          "mobile": "123123123"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "Turniej karciarzy",
+      "desc": "Zmierz się z najlepszymi!",
+      "city": "Warszawa",
+      "street": "Hazardzistów",
+      "address": 15,
+      "mobile": 837483593,
+      "email": "kontakt@karty.pl",
+      "date": "2022-05-25 12:00:00",
+      "players": [
+        {
+          "name": "Jan",
+          "lastName": "Kowal",
+          "nickName": "0x",
+          "email": "0x@email.com",
+          "mobile": 387485426
+        },
+        {
+          "name": "123",
+          "nickName": "123",
+          "lastName": "123",
+          "email": "123",
+          "mobile": 123
+        }
+      ]
+    }
+  ]
+}
